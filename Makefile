@@ -182,6 +182,15 @@ UPROGS=\
 	_wc\
 	_zombie\
 	_strdiff\
+	_getdescendant\
+	_getancestors\
+	_bigsqr\
+	_slpprc\
+	_change_queue\
+	_set_priority\
+	_set_ratio_process\
+	_print_details\
+	_foo\
 
 
 fs.img: mkfs README $(UPROGS)
@@ -256,6 +265,15 @@ EXTRA=\
 	README dot-bochsrc *.pl toc.* runoff runoff1 runoff.list\
 	.gdbinit.tmpl gdbutil\
 	strdiff.c\
+	getdescendant.c\
+	getancestors.c\
+	bigsqr.c\
+	slpprc.c\
+	change_queue.c\
+	set_priority.c\
+	set_ratio_process.c\
+	print_details.c\
+	foo.c\
 
 dist:
 	rm -rf dist

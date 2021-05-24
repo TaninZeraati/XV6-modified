@@ -32,6 +32,14 @@ struct context {
   uint eip;
 };
 
+void show_descendant(int parent_pid);
+void show_ancestors(int my_pid);
+void sleep_process(void *chan);
+void change_sched_queue(int pid, int dst_queue);
+void set_priority(int pid, int priority);
+void set_ratio_process(int pid, int priority_ratio, int arrival_time_ratio, int executed_cycle_ratio);
+void print_processes_details(void);
+
 enum procstate { UNUSED, EMBRYO, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
 
 // Per-process state
@@ -49,6 +57,17 @@ struct proc {
   struct file *ofile[NOFILE];  // Open files
   struct inode *cwd;           // Current directory
   char name[16];               // Process name (debugging)
+  int ctime;                  // adding creation time
+  int sched_queue;
+  int priority;
+
+  int priority_ratio;
+  int arrival_time_ratio;
+  int executed_cycle_ratio;
+
+  long int arrival_time;
+  int executed_cycle;
+  long int waiting_time;
 };
 
 // Process memory is laid out contiguously, low addresses first:

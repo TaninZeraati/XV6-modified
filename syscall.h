@@ -20,3 +20,12 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+#define SYS_get_descendant  22
+#define SYS_get_ancestors  23
+#define SYS_get_creation_time  24
+#define SYS_calc_perfect_square 25
+#define SYS_sleep_time 26
+#define SYS_change_queue 27
+#define SYS_set_priority 28
+#define SYS_set_ratio_process 29
+#define SYS_print_processes_details 30

@@ -6,7 +6,7 @@
 #include <stdbool.h>
 
 
-void save(int result[])
+void save(int result[],int si)
 {
 
   static char digits[] = "01";
@@ -15,7 +15,7 @@ void save(int result[])
 
   fd = open("strdiff_result.txt", O_CREATE | O_RDWR);
   int i;
-  for(i = 0; i < sizeof(*result)*2; i++){
+  for(i = 0; i < si + 2 ; i++){
     buf[i] = digits[result[i]];
     write(fd, &buf[i], 1);
   }
@@ -44,18 +44,20 @@ void strdiff(char* first_str, char* second_str){
       result[i] = 1;
     }
   }
-  if(second){
+  int si =0;
+  if(second == false){
     for(int j = size_str; j < sizeof(second_str); j++){
       result[j] = 1;
     }
+    si = sizeof(second_str);
   }
   else{
       for(int j = size_str; j < sizeof(first_str); j++){
         result[j] = 0;
     }
+    si = sizeof(first_str);
   }
-  save(result);
-
+  save(result, si);
 }
 
 int main(int argc, char *argv[])

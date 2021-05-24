@@ -23,6 +23,15 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int get_descendant(int);
+int get_ancestors(int);
+int get_creation_time(int);
+int calc_perfect_square(void);
+int sleep_time(void);
+int change_queue(int, int);
+int set_priority(int, int);
+int set_ratio_process(int, int, int, int);
+int print_processes_details();
 
 // ulib.c
 int stat(const char*, struct stat*);
@@ -37,3 +46,4 @@ void* memset(void*, int, uint);
 void* malloc(uint);
 void free(void*);
 int atoi(const char*);
+void delay(int number_of_clocks);

@@ -103,6 +103,15 @@ extern int sys_unlink(void);
 extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
+extern int sys_get_descendant(void);
+extern int sys_get_ancestors(void);
+extern int sys_get_creation_time(void);
+extern int sys_calc_perfect_square(void);
+extern int sys_sleep_time(void);
+extern int sys_change_queue(void);
+extern int sys_set_priority(void);
+extern int sys_set_ratio_process(void);
+extern int sys_print_processes_details(void);
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
@@ -126,6 +135,15 @@ static int (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+[SYS_get_descendant] sys_get_descendant,
+[SYS_get_ancestors] sys_get_ancestors,
+[SYS_get_creation_time] sys_get_creation_time,
+[SYS_calc_perfect_square] sys_calc_perfect_square,
+[SYS_sleep_time] sys_sleep_time,
+[SYS_change_queue] sys_change_queue,
+[SYS_set_priority] sys_set_priority,
+[SYS_set_ratio_process] sys_set_ratio_process,
+[SYS_print_processes_details] sys_print_processes_details,
 };
 
 void
