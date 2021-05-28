@@ -19,12 +19,10 @@ scheduling algorithm:\
 1.Round Robin.\
 2.Priority.\
 3.BJF.\
-4.FCFS.\
+4.FCFS.
 
 adding new system calls:\
 1.change queue.\
 2.set priority.\
 3.set ratio process.\
 4. get details.\
-
-
