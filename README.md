@@ -6,4 +6,11 @@ XV6-Modified is an OS cloned from xv6 kernel with some new features . xv6 is a r
 1.Writing names\
 2.Added Ctrl+L, Ctrl+K, Ctrl+I,and Normal cursor movement.\
 3.Some user programs like strdiff added.\
-  (strdiff is used for comparing two strings and according to the smallest ascii code prints 0 or 1 in a file.)
+  (strdiff is used for comparing two strings and according to the smallest ascii code prints 0 or 1 in a file.)\
+
+## Part 2 (adding new system calls):
+1. sleep process.\
+2. getting the process creation time.\
+3. show the ancestors of each process.\
+4. show the descendant of each process.\
+
