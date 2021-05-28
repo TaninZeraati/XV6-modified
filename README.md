@@ -14,3 +14,17 @@ XV6-Modified is an OS cloned from xv6 kernel with some new features . xv6 is a r
 3. show the ancestors of each process.\
 4. show the descendant of each process.\
 
+## Part 3 (Scheduling)
+scheduling algorithm:\
+1.Round Robin.\
+2.Priority.\
+3.BJF.\
+4.FCFS.\
+
+adding new system calls:\
+1.change queue.\
+2.set priority.\
+3.set ratio process.\
+4. get details.\
+
+
